@@ -22,10 +22,10 @@ This project is being done over Summer 2021.
 
 ### Services 
 - Amazon S3 (Simple Storage Service) : hosts the static pages of the client-side web application.
-- Amazon EC2 (Elastic Compute Cloud) : hosts the codes for backend and frontend. Backend server is hosted on this instance as well.
+- Amazon EC2 (Elastic Compute Cloud) : virtual machine where the codes for backend and frontend are hosted. Backend server is hosted on this instance as well.
 - Amazon RDS (Relational Database Service) : host PostgreSQL database server where informations are being stored.
-- Amazon Route 53 : routes traffics from certain subdomains to appropriate targets. Route requests from web client subdomain to Amazon S3 instance. Route requests from web server subdomain to Amazon ELB with Amazon EC2 as its target.
-- Amazon Cloudfront : delivers the content of the web app through a worldwide network. SSL certification for the client-side subdomain is installed in here.
+- Amazon Route 53 : regiters domains and setup DNS settings. Routes traffics from certain subdomains to appropriate targets. Routes requests from web client subdomain to Amazon S3 instance. Routes requests from web server subdomain to Amazon ELB with Amazon EC2 as its target.
+- Amazon Cloudfront : delivers the content of the web app through a worldwide network. Adds caching layer to Amazon S3 for optimal performance.SSL certification for the client-side subdomain is installed in here.
 - Amazon Elastic Load Balancing : accepts incoming traffic from clients and routes requests to Amazon EC2 instance. SSL certification for the server-side subdomain is registered in here.
 
 ### Docker-compose
