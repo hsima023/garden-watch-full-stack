@@ -13,8 +13,8 @@ import Container from '@material-ui/core/Container';
 
 export class Login extends Component {
     state = {
-        username: '',
-        password: '',
+        username: 'Demo',
+        password: 'password',
     };
 
     static propTypes = {
